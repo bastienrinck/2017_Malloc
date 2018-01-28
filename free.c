@@ -9,7 +9,7 @@
 
 static void merge()
 {
-	metadata_s *temp = freed;
+	metadata_t *temp = freed;
 
 	while (temp) {
 		if (temp->ptr + temp->size + 1 == temp->next) {
@@ -23,9 +23,9 @@ static void merge()
 	}
 }
 
-static void release_ptr(metadata_s *pMetadata)
+static void release_ptr(metadata_t *pMetadata)
 {
-	metadata_s *temp = freed;
+	metadata_t *temp = freed;
 
 	if (!freed) {
 		freed = pMetadata;
@@ -43,9 +43,9 @@ static void release_ptr(metadata_s *pMetadata)
 	merge();
 }
 
-static void resize_heap(metadata_s *pMetadata)
+static void resize_heap(metadata_t *pMetadata)
 {
-	metadata_s *temp = freed;
+	metadata_t *temp = freed;
 
 	release_ptr(pMetadata);
 	while (temp->next)
@@ -60,13 +60,13 @@ static void resize_heap(metadata_s *pMetadata)
 
 void free(void *ptr)
 {
-	metadata_s *temp = allocated;
+	metadata_t *temp = allocated;
 
 	while (ptr && temp && temp->ptr != ptr)
 		temp = temp->next;
 	if (!temp || !ptr)
 		return;
-	if (allocated + heap_size == ptr + ((metadata_s *)ptr)->size)
+	if (allocated + heap_size == ptr + ((metadata_t *)ptr)->size)
 		resize_heap(temp);
 	else {
 		if (temp->prev)
