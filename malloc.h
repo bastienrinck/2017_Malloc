@@ -11,7 +11,7 @@
 #include <errno.h>
 #include <zconf.h>
 
-#define HEADER sizeof(struct s_memory_chunk)
+#define HEADER sizeof(struct metadata_t)
 
 extern struct metadata_t *allocated;
 extern struct metadata_t *freed;
