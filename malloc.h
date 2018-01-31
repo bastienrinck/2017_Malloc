@@ -12,13 +12,12 @@
 #include <unistd.h>
 
 extern struct metadata_s *allocated;
-extern struct metadata_s *freed;
 
 typedef struct metadata_s {
 	void *ptr;
 	size_t size;
-	struct metadata_s *prev;
 	struct metadata_s *next;
+	char occupied;
 } metadata_t;
 
 void	*malloc(size_t);

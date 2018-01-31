@@ -24,7 +24,9 @@ void *realloc(void *ptr, size_t size)
 		if (temp->size > size)
 			return temp->ptr;
 		newElem = malloc(size);
-		return (memcpy(newElem, ptr, temp->size));
+		memcpy(newElem, ptr, temp->size);
+		free(temp);
+		return (newElem);
 	}
 	return NULL;
 }
