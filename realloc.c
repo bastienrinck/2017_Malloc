@@ -37,6 +37,7 @@ void *realloc(void *ptr, size_t size)
 		my_memcpy(newElem, ptr, temp->size);
 		free(temp);
 		return (newElem);
-	}
+	} else
+		return (malloc(size));
 	return (NULL);
 }
