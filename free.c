@@ -14,7 +14,7 @@ static void resize_heap()
 	while (temp->next)
 		temp = temp->next;
 	if (temp + HEADER + temp->size + 1 != sbrk(0))
-		return;
+		return ;
 	brk(temp);
 }
 
@@ -26,7 +26,7 @@ static void merge()
 		if (temp->ptr + temp->size + 1 == temp->next) {
 			temp->size += HEADER + temp->next->size;
 			temp->next = temp->next->next;
-			continue;
+			continue ;
 		}
 		temp = temp->next;
 	}
@@ -40,7 +40,7 @@ void free(void *ptr)
 	while (ptr && temp && temp->ptr != ptr)
 		temp = temp->next;
 	if (!temp || !ptr)
-		return;
+		return ;
 	temp->occupied = 0;
 	merge();
 }
