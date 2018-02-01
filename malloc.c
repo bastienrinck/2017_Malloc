@@ -17,7 +17,6 @@ static void *init_heap(size_t i)
 	if (brk(allocated + HEADER + i) == -1) {
 		return (NULL);
 	}
-	memset(allocated, 0, HEADER + i);
 	allocated->size = i;
 	allocated->ptr = allocated + HEADER;
 	allocated->next = NULL;
@@ -34,7 +33,6 @@ static void *resize_heap(size_t i)
 	if (brk(newElem + HEADER + i) == -1) {
 		return (NULL);
 	}
-	memset(newElem, 0, HEADER + i);
 	newElem->next = NULL;
 	newElem->size = i;
 	newElem->ptr = newElem + HEADER;

@@ -13,7 +13,7 @@ void my_memcpy(void *dest, const void *src, size_t n)
 	char *cdest = dest;
 	const char *csrc = src;
 
-	for (size_t i = 0 ; i < n ; ++i) {
+	for (size_t i = 0; i < n; ++i) {
 		cdest[i] = csrc[i];
 	}
 }
@@ -37,7 +37,6 @@ void *realloc(void *ptr, size_t size)
 		my_memcpy(newElem, ptr, temp->size);
 		free(temp);
 		return (newElem);
-	} else
-		return (malloc(size));
-	return (NULL);
+	}
+	return (malloc(size));
 }
