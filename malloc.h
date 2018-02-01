@@ -26,7 +26,7 @@ void	*calloc(size_t, size_t);
 void	free(void *);
 void	show_alloc_mem(void);
 
-#define align4(x) (((((x) -1) > >2) < <2)+4)
+#define align4(x) (((((x)-1)>>2)<<2)+4)
 #define HEADER sizeof(struct metadata_s)
 
 #endif

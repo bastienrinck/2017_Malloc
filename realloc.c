@@ -23,6 +23,7 @@ void *realloc(void *ptr, size_t size)
 	metadata_t *temp = allocated;
 	metadata_t *newElem;
 
+	write(2, "realloc\n", 9);
 	if (!ptr && size)
 		return (malloc(size));
 	while (temp && temp->ptr != ptr)
@@ -38,5 +39,6 @@ void *realloc(void *ptr, size_t size)
 		free(temp);
 		return (newElem);
 	}
+	write(2, "endrealloc\n", 12);
 	return (malloc(size));
 }
