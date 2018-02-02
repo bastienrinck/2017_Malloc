@@ -3,10 +3,8 @@
 
 int main()
 {
-	char *str;
-	int i = 0;
-	while(++i){
-		if(!(str = malloc(sizeof(char) * i * 100000)))
-		write(1, "Fail\n", 5);
-	}
+	void *b = sbrk(0);
+	if (brk(b + 100000000))
+		write(2, "should work\n", 13);
+	sleep(15);
 }
