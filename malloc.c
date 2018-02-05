@@ -54,7 +54,7 @@ void *malloc(size_t size)
 	metadata_t *temp = allocated;
 
 	write(2, "malloc\n", 8);
-	size = align4(size);
+	size = ALIGN(size);
 	if (!allocated) {
 		write(2, "endmalloc\n", 11);
 		return (init_heap(size));
