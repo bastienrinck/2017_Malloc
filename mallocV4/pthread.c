@@ -7,6 +7,7 @@
 
 #include <pthread.h>
 #include <signal.h>
+#include <zconf.h>
 
 static pthread_mutex_t g_mutex_m = PTHREAD_MUTEX_INITIALIZER;
 

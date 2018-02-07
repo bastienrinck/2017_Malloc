@@ -7,7 +7,7 @@
 
 #include "malloc.h"
 
-void my_memcpy(void *dest, const void *src, size_t n)
+static void my_memcpy(void *dest, const void *src, size_t n)
 {
 	char *cdest = dest;
 	const char *csrc = src;
@@ -22,13 +22,13 @@ void *realloc(void *ptr, size_t size)
 	metadata_t *temp = allocated;
 	void *newElem;
 
-	write(1, "Realloc\n", 8);
+	write(1, "realloc\n", 8);
 	if ((!ptr && size) || (ptr && !size)) {
 		if (ptr)
 			free(ptr);
-		return (!ptr ? malloc(size) : 0);
+		return (!ptr ? malloc(size) : NULL);
 	}
-	for (; temp && temp != ptr - HEADER; temp = temp->next);
+	for (; temp && (void *)temp + HEADER != ptr; temp = temp->next);
 	if (temp && temp->size >= size)
 		return ((void *)temp + HEADER);
 	else if (temp) {
@@ -39,5 +39,6 @@ void *realloc(void *ptr, size_t size)
 		unlock_thread(1);
 		return (newElem);
 	}
+	write(1, "realloc null\n", 13);
 	return (NULL);
 }

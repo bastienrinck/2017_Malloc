@@ -9,7 +9,6 @@
 
 static void resize_heap()
 {
-	write(1, "Resize\n", 7);
 	metadata_t *temp = allocated->last;
 
 	if (temp && !temp->occupied) {
@@ -24,7 +23,6 @@ static void resize_heap()
 
 static void merge(metadata_t *p)
 {
-	write(1, "Merge\n", 6);
 	for (; p->next && !p->next->occupied;) {
 		p->size += HEADER + p->next->size;
 		p->next = p->next->next;
@@ -40,12 +38,12 @@ void free(void *ptr)
 {
 	metadata_t *temp = allocated;
 
-	write(1, "Free\n", 5);
-	if (ptr < (void *)allocated || ptr > sbrk(0))
+	write(1, "free\n", 5);
+	if (!ptr || !temp || ptr < (void *)allocated || ptr > sbrk(0))
 		return;
 	lock_thread(0);
-	for (; ptr && temp && (void *)temp + HEADER != ptr; temp = temp->next);
-	if (ptr && temp) {
+	for (;temp && (void *)temp + HEADER != ptr; temp = temp->next);
+	if (temp) {
 		temp->occupied = 0;
 		for (; temp->prev && !temp->prev->occupied; temp = temp->prev);
 		merge(temp);
