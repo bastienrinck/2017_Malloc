@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/mallocV4.dir/calloc.c.o CMakeFiles/mallocV4.dir/free.c.o CMakeFiles/mallocV4.dir/malloc.c.o CMakeFiles/mallocV4.dir/pthread.c.o CMakeFiles/mallocV4.dir/realloc.c.o CMakeFiles/mallocV4.dir/show_alloc_mem.c.o  -o mallocV4 
