@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mallocV4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mallocV4">
+				<Option output="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/mallocV4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 mallocV4"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mallocV4/fast">
+				<Option output="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/mallocV4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 mallocV4/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/calloc.c">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/free.c">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/malloc.c">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/malloc.h">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/pthread.c">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/realloc.c">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/show_alloc_mem.c">
+			<Option target="mallocV4"/>
+		</Unit>
+		<Unit filename="/home/rectoria/projects/epitech/PSU/PSU_2017_malloc/mallocV4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
