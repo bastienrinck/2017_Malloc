@@ -12,7 +12,6 @@
 #include <unistd.h>
 
 extern struct metadata_s *allocated;
-extern struct metadata_s *freed;
 
 typedef struct metadata_s {
 	void *ptr;
@@ -20,9 +19,6 @@ typedef struct metadata_s {
 	struct metadata_s *next;
 	struct metadata_s *prev;
 	struct metadata_s *last;
-	struct metadata_s *next_freed;
-	struct metadata_s *prev_freed;
-	struct metadata_s *last_freed;
 	char occupied;
 } metadata_t;
 
