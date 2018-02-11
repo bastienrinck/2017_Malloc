@@ -5,20 +5,17 @@
 #define ALLOC_SIZE 1024*1024
 
 int main() {
-  malloc(1);
-	
-  int i;
-  void *ptr = NULL;
+	void *a = malloc(10);
+	void *b = malloc(10);
+	void *c = malloc(10);
+	void *d = malloc(10);
+	void *e = malloc(10);
+	void *f = malloc(10);
+	free(a);
+	free(d);
+	free(b);
+	free(c);
 
-  for (i = 0; i < TOTAL_ALLOCS; i++) {
-    ptr = malloc(ALLOC_SIZE);
-    if (ptr == NULL) {
-      printf("Memory failed to allocate!\n");
-      return 1;
-    }
-    free(ptr);
-  }
 
-  printf("Memory was allocated and freed!\n");	
   return 0;
 }

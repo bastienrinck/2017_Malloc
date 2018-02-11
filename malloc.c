@@ -10,6 +10,7 @@
 #include "malloc.h"
 
 metadata_t *allocated = NULL;
+metadata_t *freed = NULL;
 
 static void *init_heap(size_t i)
 {
@@ -22,6 +23,9 @@ static void *init_heap(size_t i)
 	allocated->next = NULL;
 	allocated->prev = NULL;
 	allocated->last = allocated;
+	allocated->next_freed = NULL;
+	allocated->prev_freed = NULL;
+	allocated->last_freed = NULL;
 	allocated->occupied = 1;
 	unlock_thread(0);
 	return (allocated->ptr);
@@ -39,6 +43,8 @@ static void *resize_heap(size_t i)
 	newElem->ptr = (void *) newElem + HEADER;
 	newElem->next = NULL;
 	newElem->prev = temp;
+	newElem->next_freed = NULL;
+	newElem->prev_freed = NULL;
 	newElem->occupied = 1;
 	temp->next = newElem;
 	allocated->last = newElem;
@@ -49,20 +55,29 @@ static void *resize_heap(size_t i)
 static void *realloc_freed(metadata_t *pMetadata)
 {
 	pMetadata->occupied = 1;
+	if (pMetadata->prev_freed)
+		pMetadata->prev_freed->next_freed = pMetadata->next_freed;
+	else
+		freed = pMetadata->next_freed;
+	if (pMetadata->next_freed)
+		pMetadata->next_freed->prev_freed = pMetadata->prev_freed;
+	else
+		allocated->last_freed = pMetadata->prev_freed;
 	unlock_thread(0);
 	return (pMetadata->ptr);
 }
 
 void *malloc(size_t size)
 {
-	metadata_t *temp = allocated;
+	metadata_t *temp = freed;
 
-	size = ALIGN(size);
+	my_putstr("malloc\n");
+	size = ALIGN(size*45);
 	lock_thread(0);
 	if (!allocated)
 		return (init_heap(size));
-	for (; temp; temp = temp->next)
-		if (!temp->occupied && temp->size >= size)
+	for (; temp; temp = temp->next_freed)
+		if (temp->size >= size)
 			return (realloc_freed(temp));
 	return (resize_heap(size));
 }

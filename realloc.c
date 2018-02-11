@@ -23,6 +23,7 @@ void *realloc(void *ptr, size_t size)
 	metadata_t *temp = NULL;
 	metadata_t *newElem;
 
+	my_putstr("realloc\n");
 	lock_thread(1);
 	if (!ptr && size){
 		unlock_thread(1);
