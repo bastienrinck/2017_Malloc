@@ -6,4 +6,4 @@ Replica of the C malloc function (C dynamic memory allocation).
 
 ## Authors
 * Bastien Rinck
-Thibaut Cornolti
+* Thibaut Cornolti
